@@ -165,7 +165,7 @@ class Stream(object):
             data = []
             while True:
                 c = resp.read(1)
-                if c == '\r':
+                if c == '\r' or c == '\n':
                     break
                 data.append(c)
             data = "".join(data).strip()
